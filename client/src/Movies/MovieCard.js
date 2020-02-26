@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const MovieCard = props => {
   const { title, director, metascore, stars } = props.movie;
@@ -11,6 +12,7 @@ const MovieCard = props => {
       <div className="movie-metascore">
         Metascore: <strong>{metascore}</strong>
       </div>
+
       <h3>Actors</h3>
 
       {stars.map(star => (
@@ -18,6 +20,12 @@ const MovieCard = props => {
           {star}
         </div>
       ))}
+      <Link
+        className="save-button update"
+        to={`/update-movie/${props.movie.id}`}
+      >
+        Update
+      </Link>
     </div>
   );
 };

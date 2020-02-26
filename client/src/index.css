@@ -61,6 +61,14 @@ body {
   padding: 5px 10px;
   background-color: lightseagreen;
 }
+.update {
+  top: 100px;
+  text-decoration: none;
+  color: black;
+}
+.delete {
+  top: 200px;
+}
 .save-button:hover {
   background-color: green;
   color: white;
